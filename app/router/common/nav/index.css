@@ -1,0 +1,28 @@
+.nav{
+    background-color: rgb(35, 52, 68);
+}
+.navTitle{
+    height: 60px;
+    border-bottom: 1px solid #fff;
+    color: rgb(34, 186, 160);
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px;
+}
+.navBtn{
+    height: 50px;
+    border-bottom: 1px solid #2a3b4c;
+    color: #8e9eae;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.navBtn:hover{
+    color: #fff;
+}
+.navBtnIcon{
+    margin-right: 5px;
+    font-size: 20px;
+}

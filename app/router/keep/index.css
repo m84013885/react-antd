@@ -1,0 +1,66 @@
+.payContent{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 95%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #e0e4e8;
+}
+.payTitle{
+    padding-left: 30px;
+    height: 40px;
+    color: #333;
+    text-align: left;
+    font-size: 16px;
+    font-family: PingFang-SC-Medium;
+    line-height: 40px;
+}
+.payFrom{
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 30px;
+    background-color: #fff;
+}
+.payFrom2{
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    background-color: #fff;
+}
+.payFromText{
+    margin-right:5px;
+    margin-left:25px;
+    color: #333;
+    text-align: left;
+    font-size: 14px;
+    font-family: PingFang-SC-Medium;
+}
+.payBtn{
+    margin-left: 30px;
+}
+.payLoading{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.payLoadingSpin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -20px;
+}
+.payLoadingHide,.regpayLoadingHide{
+    display: none;
+}
+.regpayLoading{
+    position: absolute;
+    top: 140px;
+    right: 10px;
+}

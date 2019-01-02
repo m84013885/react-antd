@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="x5-orientation" content="portrait" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no">
+  <title>管理后台</title>
+</head>
+
+<body>
+  <div id='main'></div>
+  <script>
+  window.serverData = {
+    inapp_info: true,
+    login_info: true,
+    download: "http://a.app.qq.com/o/simple.jsp?pkgname=qsbk.app.remix",
+    isAnchor: false,
+    share: {
+      pic: 'https://pic.app-remix.com/26fd06db0c08cd4.png',
+      title: '周年庆典，每天必送2万元福利',
+      content: '2周年庆典，登录参与抽奖，每天必送2万元福利',
+      url: 'http://test1.app-remix.com/v1/activity/secondAnniversary/main',
+    },
+    bannerText: '49902', //我的积分
+    rankListActor: [ // 主播积分榜
+      {
+        headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+        name: '用户昵称最多一百个字', // 主播昵称
+        rank: 1, // 排名
+        num: 1316887, // 积分
+        live: true, // 是否正在直播
+        uid: '1',
+        source: '2',
+        platform_id: '3'
+      },
+      {
+        headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+        name: '用户昵称最多一百个字', // 主播昵称
+        rank: 2, // 排名
+        num: 13167, // 积分
+        live: true, // 是否正在直播
+        uid: '1',
+        source: '2',
+        platform_id: '3'
+      },
+      {
+        headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+        name: '用户昵称最多一百个字', // 主播昵称
+        rank: 3, // 排名
+        num: 13167, // 积分
+        live: true, // 是否正在直播
+        uid: '1',
+        source: '2',
+        platform_id: '3'
+      },
+      {
+        headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+        name: '用户昵称最多一百个字', // 主播昵称
+        rank: 4, // 排名
+        num: 13167, // 积分
+        live: false, // 是否正在直播
+        uid: '1',
+        source: '2',
+        platform_id: '3'
+      },
+      {
+        headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+        name: '用户昵称最多一百个字', // 主播昵称
+        rank: 5, // 排名
+        num: 13167, // 积分
+        live: false, // 是否正在直播
+        uid: '1',
+        source: '2',
+        platform_id: '3'
+      },
+      {
+        headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+        name: '用户昵称最多一百个字', // 主播昵称
+        rank: 6, // 排名
+        num: 13167, // 积分
+        live: false, // 是否正在直播
+        uid: '1',
+        source: '2',
+        platform_id: '3'
+      }
+    ],
+    rankListRicher: [ // 土豪积分榜
+      {
+        headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+        name: '用户昵称最多一百个字', // 主播昵称
+        rank: 1, // 排名
+        num: 13167 // 积分
+      },
+      {
+        headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+        name: '用户昵称最多一百个字', // 主播昵称
+        rank: 2, // 排名
+        num: 13167 // 积分
+      },
+      {
+        headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+        name: '用户昵称最多一百个字', // 主播昵称
+        rank: 3, // 排名
+        num: 13167 // 积分
+      },
+      {
+        headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+        name: '用户昵称最多一百个字', // 主播昵称
+        rank: 4, // 排名
+        num: 13167 // 积分
+      }
+    ],
+    actorInfo: { // 打开当前页面的主播信息
+      headurl: 'http://avatar.app-remix.com/live_default2.jpg?imageMogr2/format/jpg/thumbnail/300x300/auto-orient', //主播
+      name: '用户昵称最多一百个字', // 主播昵称
+      value1: '1', // 积分榜排名
+      value2: '13167分', // 活动积分
+      value3: '64274', // 距离前三十名或前一名的积分距离 
+      value4: '10' //今日通关
+    },
+    randomLiveShow: { //随机直播间
+      uid: '1',
+      source: '2',
+      platform_id: '3'
+    },
+    app: 1,
+    user_info: {
+      source: '2',
+      uid: '3',
+    },
+    numberTimer: 86400, // 倒计时，秒
+    bannerTextArr: [
+      '双11充值没充够？!-{双12充值优惠返场啦！}-!仅此一天，错过今天等明年！',
+      '活动时间：!-{12月12日 00:00~24:00}-!',
+      '活动期间，!-{充值98元以上立享高额返钻！}-!还有全场特效礼物限时折扣出售，最低5折起！快去试试吧！'
+    ],
+    dataListTable: [
+      ['充值套餐', '额外赠送钻石', '获得钻石'],
+      ['98元', '40', '1020'],
+      ['298元', '188', '3168'],
+      ['588元', '566', '6446'],
+      ['1598元', '2222', '18202'],
+      ['3698元', '6999', '43979'],
+    ],
+    userLevel: 20
+  }
+
+  window.appTree = {
+    "root": {
+      "id": "root",
+      "type": "box",
+      "style": {
+        "width": "100%",
+        "height": "100%"
+      },
+      "props": {
+        "backgroundColor": "#FFAFA6",
+        "paddingBottom": "30"
+      },
+      "children": [{
+          "id": "633c3bed-c998-4330-adc3-1296c285f53c",
+          "type": "banner",
+          "props": {
+            "size": "100%",
+            "width": "",
+            "height": "480",
+            "content": "我的积分: ",
+            "color": "#fff",
+            "src": "http://localhost:3001/upload_2bdd50a610b395884660d4e27baa48c7.png",
+            "fontSize": "12",
+            "textBoxColor": "#fc7869",
+            "textBoxWidth": "110",
+            "textBoxHeight": "30",
+            "textBoxRadius": "20",
+            "marginTop": "0",
+            "paddingTop": "230"
+          },
+          "style": {},
+          "children": []
+        },
+        {
+          "id": "601f508c-faff-4947-8e05-42515e8592c7",
+          "type": "float-image",
+          "props": {
+            "left": "285",
+            "top": "345",
+            "height": "108",
+            "width": "100",
+            "src": "http://localhost:3001/upload_7c1466803aa98a2a4a6e52a011716c24.png",
+            "backgroundColor": ""
+          },
+          "style": {},
+          "children": []
+        },
+        {
+          "id": "1b871fb2-e32a-42fc-b98f-75d930e5fdc5",
+          "type": "anchor-info1",
+          "props": {
+            "width": "340",
+            "borderRadius": "10",
+            "title1": "排名",
+            "title2": "积分",
+            "title3": "距离前一名",
+            "title4": "闯关数",
+            "itemColor": "#fff",
+            "backgroundColor": "#E64856"
+          },
+          "style": {},
+          "children": []
+        },
+        {
+          "id": "04034ee4-22fe-4b83-b805-c245ec16af26",
+          "type": "ranklist-top3portrait",
+          "props": {
+            "buttonImages": [
+              "http://localhost:3001/upload_08e1010ac1b889a65ef5d0b49bbd3345.png",
+              "http://localhost:3001/upload_a5b03ce05105e1bdcd8140b66f1cd38e.png"
+            ],
+            "rankCount": "2",
+            "defaultIndex": "0",
+            "top3Images": [
+              "http://localhost:3001/upload_6c7685a9061284867c0a8fcf4360eac6.png",
+              "http://localhost:3001/upload_e43b34898afe4d6fb8a8bc08026b1ee7.png",
+              "http://localhost:3001/upload_f65183480bebbd0d4596bfe65cf89676.png"
+            ],
+            "rankItemPaddingTop": "10",
+            "rankItemPaddingBottom": "10",
+            "rankItemPaddingLeft": "10",
+            "rankItemPaddingRight": "10",
+            "rankItemSerialWidth": "40",
+            "rankItemSerialHeight": "44",
+            "rankItemSerialLineHeight": "44",
+            "rankItemSerialMR": "20",
+            "rankItemSerialFontSize": "12",
+            "rankItemPortraitWidth": "50",
+            "rankItemPortraitMR": "10",
+            "rankItemPortraitLiveWidth": "40",
+            "rankItemPortraitLiveHeight": "15",
+            "rankItemPortraitLiveBackImage": "http://localhost:3001/upload_45f65cd7aa1afb7504f0fc08e5db8d71.png",
+            "rankItemPortraitLiveBRS": "20",
+            "rankItemPortraitLiveLeft": "5",
+            "rankItemPortraitLiveBottom": "-4",
+            "rankItemNicknameWidth": "85",
+            "rankItemNicknameMR": "17",
+            "rankItemNicknameFontSize": "12",
+            "rankItemScoreFontSize": "12",
+            "listBackgroundColor": "#E64856",
+            "width": "340",
+            "listBorderRadius": "10",
+            "marginTop": "30",
+            "fullButtonWidth": "340",
+            "fullButtonHeight": "30",
+            "fullButtonMarginBottom": "10",
+            "fullButtonMarginTop": "20"
+          },
+          "style": {},
+          "children": []
+        },
+        {
+          "id": "06300349-2a99-44ec-941e-ef5c9135ec4c",
+          "type": "text",
+          "props": {
+            "label": "本活动最终解释权归本平台所有",
+            "style": {},
+            "textAlign": "center",
+            "color": "#E64856",
+            "fontSize": "12",
+            "marginTop": "20",
+            "fontWeight": ""
+          },
+          "style": {},
+          "children": []
+        },
+        {
+          "id": "527b4332-bc0c-4829-a71f-a6ca7fb7a7af",
+          "type": "popup-ruler",
+          "props": {
+            "paddingTop": "40",
+            "paddingBottom": "40",
+            "paddingLeft": "15",
+            "paddingRight": "15",
+            "buttonTop": "-20",
+            "buttonRight": "-16",
+            "buttonWidth": "52",
+            "buttonHeight": "52",
+            "buttonBackgroundImage": "http://localhost:3001/upload_89c8e386da48cfa80348c8e06c7a062a.png",
+            "outerBackgroundColor": "#E64856",
+            "titleRulerColor": "#E64856",
+            "titleRulerFontSize": "20",
+            "innerBackgroundColor": "#fff",
+            "outerPaddingTop": "10",
+            "outerPaddingBottom": "10",
+            "outerPaddingLeft": "10",
+            "outerPaddingRight": "10",
+            "outerBorderRadius": "20",
+            "innerPaddingTop": "15",
+            "innerPaddingBottom": "15",
+            "innerPaddingLeft": "15",
+            "innerPaddingRight": "15",
+            "innerBorderRadius": "10",
+            "texts": "1. 不得作弊\n2. 不可以这样子\n3. 不可以那样子\n4. 要好好学习，天天向上\n5. 嘿嘿嘿",
+            "textColor": "#E64856",
+            "textFontSize": "12",
+            "textLineHeight": "20"
+          },
+          "style": {},
+          "children": []
+        }
+      ],
+      "count": 0
+    }
+  }
+  </script>
+</body>
+
+</html>

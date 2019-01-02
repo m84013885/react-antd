@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+#main{
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style: none
+}
+
+.hide {
+  display: none
+}
+
+:global #main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/*  登录页  */
+#loginBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+}
+#loginBox .login-form {
+  padding: 40px 20px 0;
+  max-width: 500px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+#loginBox .login-form-forgot {
+  float: right;
+}
+#loginBox .login-form-button {
+  width: 100%;
+}
+/*          */
+.main{
+  height: 100%;
+}
